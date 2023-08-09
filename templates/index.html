@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Includes the styling of autucompleted emails input box -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+
+        <!-- Favicon website-->
+        <!-- <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='ico/favicon.ico') }}"> -->
+
+        <!-- Sweetalert JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Website title -->
+        <title>Autocompleted Emails Input Sending</title>
+
+    </head>
+
+    <body>
+
+        <!-- The container of autocompleted emails input box -->
+        <div class="container">
+
+            <!-- Title -->
+            <div class="title">
+                <img src="{{ url_for('static', filename='svg/email.svg') }}" alt="icon">
+                <h1>Autocompleted Emails Input Sending</h1>
+            </div>
+
+            <!-- The element which is recieved all email inputs -->
+            <div id="emails-box">
+
+                <!-- Autocompleted email suggestion with input box-->
+                <div class="autocompleted">
+                    <input type="text" placeholder="Input email here" class="autocomplete-input" id="email"/>
+                    <ul class="autocomplete-list" id="emails-list"></ul>
+                </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="details">
+                    <span>Current status: No action</span>
+                    <button type="button" id="submit-btn">Submit</button>
+            </div>
+
+        </div>
+
+
+        <!-- Importing Jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Includes the functions of autocompleted emails input -->
+        <script src= "{{ url_for('static', filename = 'js/script.js') }}"></script>
+
+    </body>
+
+</html>
