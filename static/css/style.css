@@ -1,0 +1,237 @@
+/* ----- Styling container ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*----------  Whlote page + Body -------------------- */
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #2a8cc5;
+}
+
+/* ------------------------------------------------- */
+
+/* -------- Styling about container  --------------- */
+
+.container {
+    width: 900px;
+    min-height: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 45px;
+    padding-top: 20px;
+}
+
+
+
+
+
+.container .title{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    caret-color: transparent;
+}
+
+.container .title h1{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px;
+    padding-left: 0px;
+    padding-bottom: 25px;
+    margin-left: 10px;
+}
+
+.container .title img{
+    width: 30px;
+    margin-top: -5px;
+}
+
+/* ------------------------------------------------- */
+
+
+/* ----- Styling emails-box ----- */
+
+#emails-box {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #2a8cc5;
+    border-radius: 5px;
+    max-height: 1000px;
+    padding:5px;
+    padding-bottom: 8px;
+}
+
+
+
+.emailDiv {
+    flex-basis: calc(30.00% - 10px);
+    display: flex;
+    justify-content:  space-between;
+    background-color: #2077ae;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 7px;
+    margin-left: 4px;
+    margin-right: 5px;
+    padding: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    caret-color: transparent;
+}
+
+.emailDiv > span {
+    width: auto;
+    color: white;
+    padding: 6px;
+}
+  
+.emailDiv > .deleteBtn { 
+    border: none;
+    background: #195273;
+    color: white;
+    padding-top: 2.5px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+  
+
+.emailDiv > .deleteBtn:hover {
+    background-color: #0e2c3e; 
+}
+
+
+
+
+/* ---------------------------- */
+
+
+/* ------- Styling autocompleted suggestion ---------- */
+
+
+.autocompleted{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* -------  (input) ---------- */
+
+.autocompleted > input{
+    flex:1;
+    border: none;
+    outline: none;
+    margin:4px;
+    margin-left: 2px;
+    margin-bottom: 0px;
+    padding:7px;
+    background-color: rgb(255, 255, 255);
+    width: calc(100%-60px);
+    height: 45px;
+}
+
+
+
+/* ---------------------------- */
+
+/* -------  Suggestion (ui & li) ---------- */
+
+.autocomplete-list{
+    position: absolute;
+    list-style-type: none;
+    margin: 4px;
+    margin-left: 1.5px;
+    margin-top: 43px;
+    padding: 0px;
+    width: auto;    
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px 0 rgba(208, 208, 208, 0.2), 0 6px 20px 0 rgba(128, 126, 126, 0.19);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid rgb(238, 238, 238);
+    border-right: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.autocomplete-list li {
+    padding: 11px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 0.5px solid rgb(238, 238, 238);
+    cursor: pointer;
+    transition: background-color 0.2s;  
+}
+
+
+.autocomplete-list li:hover {
+    background-color: #2a8cc5;
+    color: white;
+}
+
+.autocomplete-list li.selected {
+    background-color: #2a8cc5;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* ------------------------------------------------------- */
+
+
+/* ------------ Styling details (Current status + button) -------------- */
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    caret-color: transparent;
+}
+
+.details span{
+    font-size: 20px;
+}
+
+
+.details #submit-btn {
+    border: none;
+    outline: none;
+    color: #ffff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 9px 28px;
+    border-radius: 10px;
+    background: #2a8cc5;
+    box-shadow: 0 5px 0 #2273a2;
+}
+
+
+.details #submit-btn:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+/* ----------------------------------------------------------------- */
+
+
+
+
+
+
+
