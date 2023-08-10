@@ -155,7 +155,6 @@ $(document).ready(function(){
                         const emailBackspaceDeleted = emailDiv.last().find('span').text();
                         // emailBackspaceDeletedArray.push(emailBackspaceDeleted)
                         emailCheckDuplicatedArray.remove(emailBackspaceDeleted)
-                        console.log(emailCheckDuplicatedArray)
 
                         if(inputEmail.val() === "" && emailDivHasClass){
                             statusSpan.empty();
@@ -282,11 +281,9 @@ $(document).ready(function(){
 
     // Handle the event of each email (li tags) on ui (click)
 
-    let emailBackspaceIndexCounter = 1;
     emailList.on('click', 'li', function () {
         const clickedEmail = $(this).text().trim();
         emailCheckDuplicatedArray.push(clickedEmail)
-        console.log(emailCheckDuplicatedArray)
 
         if (clickedEmail !== '' && !isDuplicateEmail(clickedEmail)) {
             const emailDiv = createEmailDiv(clickedEmail);
@@ -296,8 +293,6 @@ $(document).ready(function(){
         } else {
             inputEmail.val('')
         }
-
-        emailBackspaceIndexCounter++;
 
         if(inputEmail.val() === ""){
                 statusSpan.html('Current status: <span style="color: #ff0000; font-weight: 500;">Not found email on database</span> ❌')
